@@ -22,4 +22,5 @@
 
 (comment
   (joker-seq 5))
-;; Will create 5 Joker columns 
+;; Will create 5 Joker columns like:
+;; => ([40 23 2 20 29 11] [36 39 44 2 28 10] [15 24 31 21 40 14] [18 40 19 22 17 5] [43 12 1 31 2 4])
