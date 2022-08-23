@@ -1,19 +1,19 @@
 (ns joker.core)
 
-(defn get-random-number-to [x]
-  (let [num (rand-int x)]
+(defn get-random-number [limit]
+  (let [num (rand-int limit)]
     (if (= 0 num)
-      (recur x)
+      (recur limit)
       num)))
 
 (defn joker
   ([]
-   (joker [(get-random-number-to 46)]))
+   (joker [(get-random-number 46)]))
   ([nums]
    (let [unique-nums (-> nums distinct vec)]
      (if (= 6 (count unique-nums))
        unique-nums
-       (let [random-num (get-random-number-to
+       (let [random-num (get-random-number
                           (if (= 5 (count unique-nums)) 21 46))]
          (recur (conj unique-nums random-num)))))))
 
