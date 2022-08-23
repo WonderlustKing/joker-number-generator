@@ -19,3 +19,7 @@
 
 (defn joker-seq [value]
   (take value (repeatedly joker)))
+
+(comment
+  (joker-seq 5))
+;; Will create 5 Joker columns 
